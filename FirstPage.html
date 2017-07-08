@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>姚星如个人博客系统</title>
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<script language="javascript">
+		    var msg="欢迎来到姚星如个人博客";//跑马灯文字
+		    var interval=800;//间隔400ms，即2s5次
+		    var seq=0;//序列号
+		    function LenScroll(){  //长度滚动函数
+		    	document.nextForm.lenText.value=msg.substring(seq,msg.length)+"   "+msg;
+		    	seq++;
+		    	if(seq>msg.length)
+		    		seq=0;
+		    	window.setTimeout("LenScroll();",interval);//定时器，等interval秒运行LenScroll函数一次
+		    }
+		</script>
+	</head>
+	<body onLoad="LenScroll()">
+    <div class="container-fluid">
+        <div class="run">
+            <img src="images/logo.gif" alt="新浪博客" class="img-responsive">
+            <div><form name="nextForm"><input type="text" name="lenText"></form></div>
+        </div>
+	    <div class="bk_banner">
+		    <div class="bk_word">姚星如的博客</div>
+		    <div class="bk_nav">
+                <nav class="navbar navbar-default navbar-group">						
+    		        <div class="collapse navbar-collapse" id="navbar-collapse">
+    			        <ul class="breadcrumb">
+    						<li class="active"><a href="#" >首页</a><span class="divider"></span></li>
+    						<li><a href="#">学无止境</a><span class="divider"></span></li>
+    						<li><a href="#">随笔</a><span class="divider"></span></li>
+    						<li><a href="#">我的相册</a><span class="divider"></span></li>
+    						<li><a href="#">关于我</a><span class="divider"></span></li>
+    						<li><a href="#">给我留言</a></li>
+    					</ul>
+    		        </div>
+    		    </nav>
+		    </div>
+	    </div>
+	    <div class="cbody">
+	        <div class="cbody_left">
+	            <div class="cbody_bar">个人资料 <span>[管理]</span></div>
+				<img src="images/yxr.jpg" alt="姚星如" class="img-responsive">
+				<ul>
+				    <li>姚星如</li>
+				    <li>母校：重庆师范大学</li>
+				    <li>专业：计算机科学与技术</li>
+				</ul>
+				<hr>
+				<ul>
+				    <li>基本资料</li>
+				    <li>电话号码：18323230431</li>
+				    <li>QQ：2651169635</li>
+				    <li>邮箱：2651169635@qq.com</li>
+				    <li>微信：w2651169635</li>
+				</ul>
+			</div>
+	        <div class="cbody_right">
+	            <div class="cbody_bar">自我描述<span>[管理]</span></div>
+	            本人现年20有余，身处高校，码农一枚。即将毕业，就绪待职。精通网站制作全过程，
+	            已经熟练掌握前端基础（HTML+css+JavaScript+JQuery）及框架Bootstrap和后台基础PHP
+	            及框架ThinkPHP和数据库MySQL、SQL Server。
+	        </div>
+	    </div>
+    </div>
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
